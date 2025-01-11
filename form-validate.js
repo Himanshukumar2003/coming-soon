@@ -1,5 +1,5 @@
 // Select the form and all inputs
-const form = document.getElementById('myForm');
+const form = document.getElementById('coming-soon');
 const inputs = [
     {
         element: document.getElementById('fullName'),
@@ -20,6 +20,12 @@ const inputs = [
         validate: (input) =>
             input.value.trim().length >= 6 && /^[0-9]+$/.test(input.value),
     },
+    {
+        element: document.getElementById('city'),
+        errorElement: document.getElementById('cityError'),
+        errorMessage: 'City is required.',
+        validate: (input) => input.value.trim() !== '',
+    }
 ];
 
 // Real-time validation
