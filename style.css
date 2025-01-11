@@ -1,0 +1,146 @@
+:root {
+    --teal-50: #f0fdfa;
+    --teal-100: #ccfbf1;
+    --teal-500: #14b8a6;
+    --teal-600: #0d9488;
+    --teal-700: #0f766e;
+    --emerald-50: #ecfdf5;
+    --emerald-100: #d1fae5;
+    --emerald-500: #10b981;
+    --emerald-600: #059669;
+    --emerald-700: #047857;
+    --gray-600: #4b5563;
+    --gray-900: #111827;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.bg-gradient {
+    background: linear-gradient(135deg, var(--teal-50), white, var(--emerald-50));
+}
+
+.text-teal {
+    color: var(--teal-600);
+}
+
+.bg-teal-light {
+    background-color: var(--teal-100);
+}
+
+.text-gradient {
+    background: linear-gradient(to right, var(--teal-600), var(--emerald-600));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.btn-gradient {
+    background: linear-gradient(to right, var(--teal-500), var(--emerald-500));
+    border: none;
+    color: white;
+}
+
+.btn-gradient:hover {
+    background: linear-gradient(to right, var(--teal-600), var(--emerald-600));
+    color: white;
+}
+
+.btn-outline-teal {
+    color: var(--teal-600);
+    border-color: var(--teal-600);
+}
+
+.btn-outline-teal:hover {
+    background-color: var(--teal-600);
+    color: white;
+}
+
+.text-gray-600 {
+    color: var(--gray-600);
+}
+
+.text-gray-900 {
+    color: var(--gray-900);
+}
+
+.feature-card {
+    transition: all 0.3s ease;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+}
+
+.feature-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, var(--teal-500), var(--emerald-500));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.feature-card:hover::before {
+    opacity: 1;
+}
+
+.feature-card:hover .card-body {
+    color: white;
+    position: relative;
+    z-index: 1;
+}
+
+.feature-card:hover i,
+.feature-card:hover h3,
+.feature-card:hover p {
+    color: white;
+}
+
+.feature-card i,
+.feature-card h3,
+.feature-card p {
+    transition: color 0.3s ease;
+}
+
+
+.text-gradient {
+    background: linear-gradient(to right, var(--teal-500), var(--emerald-500));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.modal-content {
+    background-color: var(--teal-50);
+}
+
+.min-vh-100 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.error-msg {
+    color: red;
+    font-size: 0.875em;
+    margin-top: 5px;
+}
+
+.is-invalid {
+    border-color: red;
+}
+
+.modal-dialog {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
